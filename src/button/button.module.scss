@@ -1,0 +1,33 @@
+@use 'sass:color';
+
+.button {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px 25px;
+  background: linear-gradient(to right, #e53935, #e35d5b);
+  cursor: pointer;
+  border-width: 0;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+
+  &:hover,
+  &:active {
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+
+  @media (min-width: 768px) {
+    width: auto;
+  }
+}
