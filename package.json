@@ -1,7 +1,6 @@
 {
-  "name": "npm_vite",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@jds/npm_vite",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,22 +11,22 @@
   "dependencies": {
     "clsx": "^2.1.1",
     "lodash.uniqueid": "^4.0.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.2.0"
   },
   "devDependencies": {
-    "@types/lodash.uniqueid": "^4.0.9",
-    "@types/react": "^18.2.66",
-    "@types/react-dom": "^18.2.22",
-    "@typescript-eslint/eslint-plugin": "^7.2.0",
-    "@typescript-eslint/parser": "^7.2.0",
-    "@vitejs/plugin-react-swc": "^3.5.0",
-    "eslint": "^8.57.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.6",
-    "rollup-plugin-node-externals": "^7.1.2",
-    "sass": "^1.76.0",
-    "typescript": "^5.2.2",
-    "vite": "^5.2.0"
+    "@types/lodash.uniqueid": "4.0.9",
+    "@types/react": "18.2.66",
+    "@types/react-dom": "18.2.22",
+    "@typescript-eslint/eslint-plugin": "7.2.0",
+    "@typescript-eslint/parser": "7.2.0",
+    "@vitejs/plugin-react-swc": "3.5.0",
+    "eslint": "8.57.0",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-react-refresh": "0.4.6",
+    "react-dom": "18.2.0",
+    "rollup-plugin-node-externals": "7.1.2",
+    "sass": "1.76.0",
+    "typescript": "5.2.2",
+    "vite": "^5.2.11"
   }
 }
