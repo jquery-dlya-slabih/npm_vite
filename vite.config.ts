@@ -15,5 +15,9 @@ export default defineConfig({
     port: 3000,
     open: true
   },
-  plugins: [react(), dts({ exclude: 'dev' }), nodeExternals()]
+  plugins: [
+    react(),
+    dts({ exclude: ['dev', 'vite.config.ts'] }),
+    nodeExternals()
+  ]
 });
