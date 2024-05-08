@@ -1,7 +1,6 @@
 {
-  "include": ["src", "dev", "@types", "vite.config.ts"],
-  "exclude": ["node_modules"],
   "compilerOptions": {
+    "types": ["@testing-library/jest-dom"],
     "baseUrl": ".",
     "paths": {
       "plus": ["src/plus/index.ts"]

@@ -17,7 +17,7 @@ export default defineConfig({
   },
   plugins: [
     react(),
-    dts({ exclude: ['dev', 'vite.config.ts'] }),
+    dts({ exclude: ['dev', 'src/*/*.test.*', 'vite.*.ts', 'vitest.*.ts'] }),
     nodeExternals()
   ]
 });
