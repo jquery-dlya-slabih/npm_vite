@@ -2,11 +2,20 @@
   "name": "@jds/npm_vite",
   "version": "1.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+  "repository": "https://github.com/jquery-dlya-slabih/npm_vite",
+  "homepage": "https://github.com/jquery-dlya-slabih/npm_vite",
+  "module": "dist/index.js",
+  "main": "dist/index.cjs",
+  "typings": "dist/index.d.ts",
+  "sideEffects": [
+    "*.css"
+  ],
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": "18 || >=20",
+    "npm": "9 || >=10"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -21,12 +30,27 @@
     "@typescript-eslint/parser": "7.2.0",
     "@vitejs/plugin-react-swc": "3.5.0",
     "eslint": "8.57.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-jsx-a11y": "6.8.0",
+    "eslint-plugin-react": "7.34.1",
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-react-refresh": "0.4.6",
+    "prettier": "3.2.5",
     "react-dom": "18.2.0",
     "rollup-plugin-node-externals": "7.1.2",
     "sass": "1.76.0",
     "typescript": "5.2.2",
-    "vite": "^5.2.11"
+    "typescript-plugin-css-modules": "5.1.0",
+    "vite": "^5.2.11",
+    "vite-plugin-dts": "^3.9.1"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "prettier:write": "npx prettier . --write",
+    "prettier:check": "prettier --check .",
+    "preview": "vite preview",
+    "prepare": "git config --local core.hooksPath .githooks || echo 'Во время установки конфигурации git-хуков произошла ошибка'"
   }
 }

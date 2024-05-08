@@ -1,25 +1,29 @@
 {
+  "include": ["src", "dev", "@types", "vite.config.ts"],
+  "exclude": ["node_modules"],
   "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "plus": ["src/plus/index.ts"]
+    },
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "customMatcher": "scss$",
+          "noUncheckedIndexedAccess": true
+        }
+      }
+    ],
     "jsx": "react-jsx",
-
-    /* Linting */
+    "moduleResolution": "bundler",
+    "target": "ES6",
+    "outDir": "dist",
+    "declaration": true,
+    "skipLibCheck": true,
+    "noEmit": true,
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
-  },
-  "include": ["src", "dev", "@types"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+    "noUncheckedIndexedAccess": true,
+    "allowUnreachableCode": false
+  }
 }

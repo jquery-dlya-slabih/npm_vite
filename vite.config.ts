@@ -1,6 +1,7 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react-swc';
 import nodeExternals from 'rollup-plugin-node-externals';
+import dts from 'vite-plugin-dts';
 
 export default defineConfig({
   build: {
@@ -14,5 +15,5 @@ export default defineConfig({
     port: 3000,
     open: true
   },
-  plugins: [react(), nodeExternals()]
-})
+  plugins: [react(), dts({ exclude: 'dev' }), nodeExternals()]
+});
