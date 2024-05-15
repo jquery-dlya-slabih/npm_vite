@@ -6,9 +6,21 @@ import dts from 'vite-plugin-dts';
 export default defineConfig({
   build: {
     lib: {
-      formats: ['es', 'cjs'],
-      entry: 'src/index.ts',
-      fileName: '[name]'
+      entry: 'src/index.ts'
+    },
+    rollupOptions: {
+      output: [
+        {
+          dir: 'dist',
+          entryFileNames: '[name].es.js',
+          preserveModules: true
+        },
+        {
+          dir: 'dist',
+          format: 'cjs',
+          entryFileNames: '[name].js'
+        }
+      ]
     }
   },
   server: {

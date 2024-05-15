@@ -4,8 +4,8 @@
   "type": "module",
   "repository": "https://github.com/jquery-dlya-slabih/npm_vite",
   "homepage": "https://github.com/jquery-dlya-slabih/npm_vite",
-  "module": "dist/index.js",
-  "main": "dist/index.cjs",
+  "module": "dist/index.es.js",
+  "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "sideEffects": [
     "*.css"
